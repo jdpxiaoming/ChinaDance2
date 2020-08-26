@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.example.dancechina2"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -34,7 +34,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 //    ijkplayer播放器引入
-    implementation 'com.github.jdpxiaoming:ijkplayerview:0.0.17'
-    implementation 'com.github.jdpxiaoming:ijkplayer-java:0.0.17'
-    implementation 'com.github.jdpxiaoming:ijkplayer-armv7a:0.0.17'
+    implementation 'com.github.jdpxiaoming:ijkplayerview:0.0.18'
+    implementation 'com.github.jdpxiaoming:ijkplayer-java:0.0.18'
+    implementation 'com.github.jdpxiaoming:ijkplayer-armv7a:0.0.18'
+    implementation 'com.github.jdpxiaoming:ijkplayer-arm64:0.0.18'
 }

@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
-
-
     <tv.danmaku.ijk.media.ijkplayerview.widget.media.IjkVideoView
+        android:id="@+id/ijk_video_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
     <TextView
-        android:id="@+id/tv_tigle"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="视频名称"
+        android:textSize="18sp"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="上一个"
+        android:layout_marginBottom="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/video_play_btn"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="播放"
+        android:layout_marginBottom="30dp"
         app:layout_constraintLeft_toRightOf="@id/last_video_btn"
         app:layout_constraintRight_toLeftOf="@id/next_video_btn"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,8 +49,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="下一个"
+        android:layout_marginBottom="30dp"
         app:layout_constraintLeft_toRightOf="@id/video_play_btn"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/video_play_btn"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_button_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中国舞A组"
+            android:checked="true"
+            android:textColor="@color/white"
+            />
+        <RadioButton
+            android:id="@+id/radio_button_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中国舞B组"
+            android:textColor="@color/white"
+            />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

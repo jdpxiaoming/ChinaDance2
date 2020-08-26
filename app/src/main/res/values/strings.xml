@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">DanceChina2</string>
+
+    <array name="group_a">
+        <item>走步与敬礼</item>
+        <item>音乐反应曲一</item>
+        <item>手位</item>
+        <item>勾绷脚</item>
+        <item>含胸展胸</item>
+        <item>推指绕腕</item>
+        <item>头的动作</item>
+        <item>蛙跳步</item>
+        <item>模仿与想象</item>
+    </array>
+
+    <array name="group_b">
+        <item>走步与敬礼</item>
+        <item>音乐反应曲二</item>
+        <item>手位</item>
+        <item>提腰、松腰</item>
+        <item>旁开腿</item>
+        <item>推指绕腕</item>
+        <item>半蹲</item>
+        <item>鸡走步</item>
+        <item>模仿与想象</item>
+    </array>
+
 </resources>
