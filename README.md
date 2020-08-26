@@ -17,7 +17,7 @@
 
 
 # 体验测试
-![pic](/documents/app.jpg)
+![pic](/documents/app.png)
 
 
 # 视频版权问题
