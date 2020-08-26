@@ -193,8 +193,8 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG,"startPlay()")
         IjkMediaPlayer.native_profileBegin(IjkMediaPlayer.IJK_LIB_NAME_FFMPEG)
 
-//        var videoPath =  "android.resource://${packageName}/raw/${mGroup}0${mCurrentPosition}";
-        var videoPath = "${Environment.getExternalStorageDirectory()}/chinadance/${mGroup}0${mCurrentPosition}.mp4";
+        var videoPath =  "android.resource://${packageName}/raw/${mGroup}0${mCurrentPosition}";
+//        var videoPath = "${Environment.getExternalStorageDirectory()}/chinadance/${mGroup}0${mCurrentPosition}.mp4";
         Log.i(TAG,"paly video : ${videoPath}")
         Log.i(TAG," anoth storage getExternalFilesDir:${getExternalFilesDir(Environment.DIRECTORY_MOVIES)}")
         ijk_video_view.setAspectRatio(IRenderView.AR_ASPECT_FILL_PARENT)
