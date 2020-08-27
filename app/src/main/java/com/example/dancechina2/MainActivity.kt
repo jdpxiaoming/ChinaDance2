@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
          */
         public var GROUP_B="b"
     }
-    private var mMediaController: AndroidMediaController? = null
 
     private var mCurrentPosition = 1;
 
@@ -43,14 +42,6 @@ class MainActivity : AppCompatActivity() {
      * b:中国舞二级B组
      */
     private var mGroup = GROUP_A
-    /**
-     * 权限申请 sd读、写、相机权限集合
-     */
-    private val requestPermission = arrayOf(
-        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-        Manifest.permission.CAMERA
-    )
-    private val mRequestPermissionCode = 10086 //request camera permission .
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -135,7 +126,7 @@ class MainActivity : AppCompatActivity() {
             titles = resources.getStringArray(R.array.group_b)
         }
 
-        var title = titles[mCurrentPosition-1]
+        var title = "${mGroup}组${mCurrentPosition}：${titles[mCurrentPosition-1]}"
         tv_title.text = title;
     }
 
@@ -200,47 +191,13 @@ class MainActivity : AppCompatActivity() {
         ijk_video_view.setAspectRatio(IRenderView.AR_ASPECT_FILL_PARENT)
         ijk_video_view.setVideoPath(videoPath, IjkVideoView.IJK_TYPE_FILE_PLAY)
         ijk_video_view.setRender(IjkVideoView.RENDER_SURFACE_VIEW)
-        /*ijk_video_view.setOnPreparedListener {
-            it.start()
-        }*/
+
         ijk_video_view.start()
         //update the current video title .
         updateTitle()
     }
 
 
-    override fun onResume() {
-        super.onResume()
-        // Example of a call to a native method
-        // Example of a call to a native method
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
-            if (PermissionChecker.checkSelfPermission(
-                    this,
-                    Manifest.permission.CAMERA
-                ) != PermissionChecker.PERMISSION_GRANTED
-            ) {
-                requestPermissions(requestPermission, mRequestPermissionCode)
-            } else {
-//                startPlay()
-            }
-        } else {
-//            startPlay()
-        }
-    }
-
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String?>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == mRequestPermissionCode) {
-            if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                startPlay()
-            }
-        }
-    }
 
     override fun onDestroy() {
         super.onDestroy()
